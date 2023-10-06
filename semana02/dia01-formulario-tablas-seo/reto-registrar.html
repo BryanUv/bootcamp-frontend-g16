@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reto: Crear un formulario</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<body>
+
+  <!-- Todo: Crear un formulario para crear una cuenta de usuario con los campos nombres,apellidos,
+  email, telefono, password, confirmar password(cuadro de texto). y un boton llamado registrarse . opcionalmente usar el
+  framework pico que vimos en clase.-->
+    <main class="container">
+      <nav aria-label="breadcrumb">
+        <ul>
+          <li><a href="./reto-registrar.html">Home</a></li>
+          <li>Formulario</li>
+        </ul>
+      </nav>
+      <h1 style="text-align: center;">Registro de Usuario</h1>
+
+      <form>
+
+        <div class="grid">
+
+          <label for="firstname">
+            Nombre:
+            <input type="text" name="nombre" maxlength="20" placeholder="Ingrese su Nombre" required>
+          </label>
+    
+          <label for="lastname">
+            Apellido:
+            <input type="text" name="apellido" maxlength="30" placeholder="Ingrese su Apellido" required>
+          </label>
+
+        </div>
+        
+  
+        <label>
+          Correo Electrónico:
+          <input type="email" name="email" placeholder="Ingrese Correo Electrónico" required>
+        </label>
+  
+        <label>
+          Teléfono:
+          <input type="tel" name="telefono" required placeholder="Ej. +51 922 022 022" pattern="\+[0-9]{2} [0-9]{9}">
+          <small>Ingresar con el formato telefonico.</small>
+        </label>
+  
+        <label>
+          Contraseña:
+          <input type="password" name="password" placeholder="Ingrese una Contraseña" required>
+        </label>
+  
+        <label>
+          Confirmar Contraseña:
+          <input type="password" name="password" placeholder="Ingrese una Contraseña" required>
+          <small>Ingrese nuevamente la contraseña.</small>
+        </label>
+  
+        <input type="submit" value="Registrarse">
+      </form>
+
+    </main>
+    <footer>
+      <p style="text-align: center;"><small><a href="https://codigo.edu.pe/">CodiGO - Tecsup</a></small></p>
+    </footer>
+</body>
+</html>
