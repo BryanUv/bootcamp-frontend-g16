@@ -12,7 +12,7 @@
         <h1>Formularios + Input + Validaciones</h1>
 
         <form>
-          <h2>Inputs</h2>
+          <h2>Inputs Generales</h2>
           <label for="text1">Input tipo texto :</label>
           <input type="text" placeholder="Ingrese algun texto" id="text1" name="texto">    
 
@@ -107,6 +107,38 @@
 
           <input type="submit" value="Guardar">
           <input type="reset" value="Limpiar">
+        </form>
+        <hr>
+        <form>
+          <H2>TextArea</H2>
+
+          <label>
+            <textarea placeholder="Escribe una descripcion sobre ti" cols="30" rows="3" name="biografia"></textarea>
+          </label>
+
+          <label>
+            <textarea placeholder="Escribe alguna cosa larga" rows="3" disabled name="biografia2"></textarea>
+          </label>
+
+          <input type="submit" value="Guardar">
+        </form>
+        <hr>
+
+        <form>
+          <h2>Selects</h2>
+
+          <label>
+            comida favorita
+            <select name="comidas" >
+              <option value="">Selecciona tu comida favorita...</option>
+              <option value="fr">Francesa</option>
+              <option value="jp">Japonesa</option>
+              <option value="it">Italiana</option>
+              <option value="th">Tailandesa</option>
+            </select>
+          </label>
+
+          <input type="submit" value="Guardar">
         </form>
     </main>
 </body>
