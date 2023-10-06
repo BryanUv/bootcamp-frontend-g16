@@ -195,6 +195,44 @@
 
           <input type="submit" value="Guardar">
         </form>
+        <hr>
+        <form>
+          <h2>Validaciones</h2>
+
+          <label>
+            Nombre
+            <input type="text" name="nombre" minlength="3" maxlength="15" required>
+          </label>
+
+          <label>
+            email
+            <input type="email" name="email" required>
+          </label>
+
+          <label>
+            edad
+            <input type="number" name="edad" required min="1" max="99">
+          </label>
+
+          <label>
+            telefono
+            <input type="tel" name="telefono" required placeholder="+51 922111111" pattern="\+[0-9]{2} [0-9]{9}">
+          </label>
+          <p>+51 921 112 921</p>
+
+          <label>
+            comidas
+            <select required name="comida">
+              <option selected disabled>Selecciona tu comida favorita.....</option>
+              <option value="fr">Francesa</option>
+              <option value="it">Italiana</option>
+              <option value="jp">Japonesa</option>
+              <option value="pe">Peruana</option>
+            </select>
+          </label>
+
+          <input type="submit" value="Guardar">
+        </form>
     </main>
 </body>
 </html>
