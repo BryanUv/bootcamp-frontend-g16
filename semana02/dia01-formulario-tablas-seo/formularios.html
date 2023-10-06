@@ -1,11 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formularios + inputs + validaciones</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
 </head>
 <body>
-    
+    <main class="container">
+        <h1>Formularios + Input + Validaciones</h1>
+
+        <form>
+          <h2>Inputs</h2>
+          <label for="text1">Input tipo texto :</label>
+          <input type="text" placeholder="Ingrese algun texto" id="text1" name="texto">    
+
+          <label>
+            input (solo lectura)
+            <input type="text" placeholder="input de solo lectura" readonly value="solo lectura">
+          </label>
+
+          <label>
+            input (Desactivado)
+            <input type="text" placeholder="input Desactivado" disabled>
+          </label>
+
+          <label>
+            input tipo number
+            <input type="number" placeholder="Edad Ej. 18" name="edad">
+          </label>
+
+          <label>
+            input tipo email
+            <input type="email" placeholder="Correo Ej. Sfa@gmail.com" name="email">
+          </label>
+
+          <label>
+            input tipo range(edad)
+            <input type="range" min="1" max="100">
+          </label>
+
+          <label>
+            input tipo tel
+            <input type="tel" placeholder="(51)12312112122">
+          </label>
+
+          <label>
+            input tipo url
+            <input type="url" placeholder="sitio web">
+          </label>
+
+          <label>
+            input tipo password
+            <input type="password" placeholder="password">
+          </label>
+
+          <label>
+            input tipo color
+            <input type="color" >
+          </label>
+
+          <label>
+            input tipo search
+            <input type="search" >
+          </label>
+
+          <label>
+            input tipo file (para seleccionar archivos) uno a la vez
+            <input type="file" accept=".jpg">
+          </label>
+
+          <label>
+            input file seleccionar varios archivos
+            <input type="file" accept=".jpg" multiple>
+          </label>
+
+          <input type="hidden" value="datos-ocultos">
+
+          <input type="submit" value="Guardar">
+          <input type="reset" value="Limpiar">
+        </form>
+    </main>
 </body>
 </html>
