@@ -12,23 +12,27 @@
   email, telefono, password, confirmar password(cuadro de texto). y un boton llamado registrarse . opcionalmente usar el
   framework pico que vimos en clase.-->
     <main class="container">
+      <!-- Barra de navegacion -->
       <nav aria-label="breadcrumb">
         <ul>
           <li><a href="./reto-registrar.html">Home</a></li>
           <li>Formulario</li>
         </ul>
       </nav>
-      <div class="headings" style="text-align: center;">
-        <h2>Formulario de Usuario</h2>
-        <h3>Crear usuario</h3>
+      <div class="headings" >
+        <!-- Referenciando una imagen por su ruta, colocando titulo y subtitulo -->
+        <img src="https://img.freepik.com/vector-premium/icono-circulo-usuario-anonimo-ilustracion-vector-estilo-plano-sombra_520826-1931.jpg?size=626&ext=jpg" alt="logo"
+        style="width: 100px;">
+        <h2>Crea una cuenta</h2>
+        <h3>Ingresa la siguiente información para registrarte.</h3>
       </div>
 
       <form>
 
         <div class="grid">
-
+          <!-- Tipo text -->
           <label for="firstname">
-            Nombre:
+            Nombres
             <input type="text" name="nombre" maxlength="20" placeholder="Ingrese su Nombre" required>
           </label>
     
@@ -38,31 +42,77 @@
           </label>
 
         </div>
-        
-  
+        <!-- Tipo number -->
+        <label>
+          Edad
+          <input type="number" name="edad" min="1" max="99" placeholder="Ej: 19" required>
+        </label>
+        <!-- Tipo date -->
+        <label>
+          Fecha de nacimiento
+          <input type="date" name="fecha" required>
+        </label>
+        <!-- Tipo select -->
+        <label>
+          Genero
+          <select>
+            <option selected disabled>Selecciona tu genero</option>
+            <option value="m">Masculino</option>
+            <option value="f">Femenino</option>
+          </select>
+        </label>
+        <!-- Tipo email -->
         <label>
           Correo Electrónico:
-          <input type="email" name="email" placeholder="Ingrese Correo Electrónico" required>
+          <input type="email" name="email" placeholder="Email: Ej, user@gmail.com" required>
+        </label>
+
+        <label>
+          Dirección
+          <input type="text" name="direccion1" placeholder="Dirección" minlength="1" maxlength="40" required>
+          <input type="text" name="direccion2" placeholder="Dirección línea 2" minlength="1" maxlength="40" required>
+        </label>
+        <!-- Tipo tel -->
+        <label>
+          Teléfono
+          <input type="tel" name="telefono" required placeholder="Número de teléfono" pattern="\+[0-9]{2} [0-9]{9}">
+          <small>Ingresar con el formato telefonico Ej. +51 999 999 999</small>
+        </label>
+        <!-- Tipo password -->
+        <label>
+          Contraseña
+          <input type="password" name="password1" placeholder="Ingrese una Contraseña" required>
+          <input type="password" name="password2" placeholder="Confirmar Contraseña" required>
         </label>
   
         <label>
-          Teléfono:
-          <input type="tel" name="telefono" required placeholder="Ej. +51 922 022 022" pattern="\+[0-9]{2} [0-9]{9}">
-          <small>Ingresar con el formato telefonico.</small>
+          Código postal
+          <input type="number" name="postal" placeholder="Ej: 14001" required>
+          <small>Ingrese su código postal tal como en el ejemplo.</small>
         </label>
-  
+
         <label>
-          Contraseña:
-          <input type="password" name="password" placeholder="Ingrese una Contraseña" required>
+          Ciudad
+          <input type="text" name="ciudad" placeholder="Ej: Chiclayo" minlength="1" maxlength="20" required>
         </label>
-  
+        <!-- Tipo file -->
         <label>
-          Confirmar Contraseña:
-          <input type="password" name="password" placeholder="Ingrese una Contraseña" required>
-          <small>Ingrese nuevamente la contraseña.</small>
+          Subir Firma
+          <input type="file" name="firma" accept=".jpg , .jpeg" required>
         </label>
-  
-        <input type="submit" value="Registrarse">
+        <!-- Tipo CheckBox -->
+        <label>
+          <input type="checkbox" name="acceptTerminos" value="acceptTerminos"> Acepto los términos, condiciones y políticas.
+        </label><br>
+        <!-- Tipo submit -->
+        <label>
+          <input type="submit" value="Registrarse">
+        </label>
+        <!-- Haciendo referencia otra pesataña para acceder -->
+        <label>
+          <p>Ya tienes una cuenta? <a href="#"><u>Accede desde aquí</u></a></p>
+        </label>
+        
       </form>
 
     </main>
