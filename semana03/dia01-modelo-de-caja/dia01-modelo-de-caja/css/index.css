@@ -23,8 +23,59 @@
     --accent-cyan: hsl(176, 68%, 64%);
     --accent-blue: hsl(198, 60%, 50%);
     --accent-light-red: hsl(0, 100%, 63%);
+
+    --neutral-white: hsl(0, 0%, 100%);
+}
+
+/* RESETS */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-size: var(--font-size);
 }
 
 body{
-    background: var(--color);
+    background: var(--primary-dark-blue-intro);
+    color: var(--neutral-white);
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+img{
+    /* TODO: RWD PARA IMAGENES */
+}
+
+.wrapper{
+    width: 1440px;
+    /* TODO: Adaptar el ancho de la pg a dispositivos moviles */
+}
+
+.header{
+    /* border: 1px solid red; */
+
+    font-family: var(--font-primary);
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 3rem;
+}
+
+.header__nav {
+  /* border: 1px solid yellow; */
+
+  list-style: none;
+  padding: 10px;
+  margin: 10px;
+
+  display: flex;
+  gap: 3rem; /* 1rem = 14px (html)*/
 }
