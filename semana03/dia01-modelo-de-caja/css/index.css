@@ -50,10 +50,13 @@ a{
 
 img{
     /* TODO: RWD PARA IMAGENES */
+    max-width: 100%;
+    height: auto;
 }
 
 .wrapper{
-    width: 1440px;
+    /* width: 1440px; */
+    width: min(100% - 3rem, 1440px);
     /* TODO: Adaptar el ancho de la pg a dispositivos moviles */
 }
 
@@ -98,7 +101,8 @@ img{
 }
 
 .hero__title{
-  width: 720px;
+  /* width: 720px; */
+  width: min(100% - 3rem, 720px);
 
   font-family: var(--font-primary);
   font-weight: var(--font-weight-bold);
@@ -108,7 +112,8 @@ img{
 }
 
 .hero__text{
-  width: 720px;
+  /* width: 720px; */
+  width: min(100% - 3rem, 720px);
 
   font-family: var(--font-secondary);
   font-size: 1.2rem;
@@ -116,6 +121,20 @@ img{
 
   text-align: center;
 }
+
+@media (max-width: 768px){
+  .hero__text{
+    padding: 0;
+  }
+}
+
+/*
+576px -> pantallas pequeñas (celulares)
+768px -> pantallas pequeñas (tablets y celulares)
+992px -> pantallas medianas (Desktop)
+1200px -> pantallas grandes (Desktops, TVs)
+*/
+
 
 .hero__button{
   font-family: var(--font-primary);
@@ -142,6 +161,12 @@ img{
   justify-content: center;
   gap: 5rem;
   background-color: var(--primary-dark-blue-main);
+}
+
+@media (max-width: 768px){ /* se aplica a dispositivos como tables y celulares*/
+  .features{
+    grid-template-columns: 340px;
+  }
 }
 
 .feature{
@@ -178,6 +203,12 @@ img{
   padding-top: 8rem;
 }
 
+@media (max-width: 768px){ /* se aplica a dispositivos como tables y celulares*/
+  .collaboration{
+    flex-direction: column;
+  }
+}
+
 .how_words{
   display: flex;
   flex-direction: column;
@@ -212,8 +243,20 @@ img{
 /* Clase testimonials */
 
 .testimonials{
+  background-color: var(--primary-dark-blue-main);
+
   display: flex;
+  justify-content: center;
   gap: 2rem; /* separacion de elementos*/
+
+  padding-top: 8rem;
+  padding-bottom: 18rem;
+}
+
+@media (max-width: 768px){ /* se aplica a dispositivos como tables y celulares*/
+  .testimonials{
+    flex-direction: column;
+  }
 }
 
 .testimonial{
@@ -227,17 +270,150 @@ img{
 .testimonial__text{
   margin-bottom: 2rem;
   line-height: 1.5; /* separacion de linea*/
+  width: 21rem;
 }
 
 .testimonial__profile{
   display: flex;
   gap: .5rem;
+
+  font-size: .8rem;
 }
 
 .testimonial__profile img{
   border-radius: 50%;
 }
 
+.testimonial__profile h4{
+  font-weight: var(--font-weight-bold);
+}
+
 .testimonial__profile h5{
   font-weight: var(--font-weight-regular);
+}
+
+/* Clase early--access */
+
+.early--access{
+  /* border: 1px solid red; */
+  font-family: var(--font-primary);
+  width: 53rem;
+  padding: 2rem;
+
+  background-color: var(--primary-dark-blue-testimonials);
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.early--access h2{
+  font-size: 2rem;
+}
+
+.early--access p{
+  text-align: center;
+}
+
+.early--access form{
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 768px){ /* se aplica a dispositivos como tables y celulares*/
+  .early--access{
+    width: 100%;
+  }
+  .early--access form{
+    flex-direction: column;
+  }
+}
+
+.early--access input[type=text]{
+  border-radius: 1.5rem;
+  border: none;
+  padding: 1rem 2rem;
+  width: 30rem;
+}
+
+.early--access input[type=submit]{
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  border: 0;
+  border-radius: 7rem;
+  padding: 1rem 1.5rem;
+  min-width: 120px;
+  color: var(--neutral-white);
+  background: 
+    linear-gradient(
+      90deg,
+      var(--accent-cyan) 0%,
+      var(--accent-blue) 35%
+    )
+  ;
+}
+
+/* Clase footer */
+
+.footer{
+  font-family: var(--font-primary);
+  background-color: var(--primary-dark-blue-footer);
+  padding: 15rem 0 5rem 0;
+
+  position: relative;
+}
+
+.footer--wrapper{
+  /* border: 1px solid yellow; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 76rem;
+  margin: 0 auto;
+}
+
+.footer-info{
+  display: flex;
+  gap: 4rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px){ /* se aplica a dispositivos como tables y celulares*/
+  .footer-info{
+    flex-direction: column;
+  }
+}
+
+.footer-info__description{
+  width: 22rem;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.footer-info__contact{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-info__contact span{
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-info__links{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
