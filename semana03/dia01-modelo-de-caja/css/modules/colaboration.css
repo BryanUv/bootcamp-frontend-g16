@@ -1,0 +1,18 @@
+/* Clase collaboration */
+
+.collaboration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  
+    background-color: var(--primary-dark-blue-main);
+  
+    padding-top: 8rem;
+  }
+  
+  @media (max-width: 768px){ /* se aplica a dispositivos como tables y celulares*/
+    .collaboration{
+      flex-direction: column;
+    }
+  }

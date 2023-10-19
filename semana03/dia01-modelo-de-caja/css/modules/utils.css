@@ -1,0 +1,5 @@
+.wrapper{
+    /* width: 1440px; */
+    width: min(100% - 3rem, 1440px);
+    /* TODO: Adaptar el ancho de la pg a dispositivos moviles */
+}
