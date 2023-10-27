@@ -9,3 +9,23 @@
     background-size: cover;
     height: 700px;
 }
+
+.footer-color{
+    background-color: rgb(38, 31, 68);
+}
+
+.pading-top{
+    padding-top: 6rem;
+}
+
+.margin-bottom{
+    margin-bottom: 60px;
+}
+
+.martop{
+    margin-top: 20rem;
+}
+
+.marbotom{
+    margin-bottom: 10rem;
+}
